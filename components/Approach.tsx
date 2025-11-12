@@ -43,8 +43,8 @@ const Approach: React.FC = () => {
   // So, we build the translated array *before* passing it.
   const translatedProjects = approachData.map(item => ({
     ...item, // Keep the 'link' and 'img' properties
-    title: t(`${item.titleKey}`),
-    description: t(`${item.descriptionKey}`),
+    title: t(item.titleKey as any),
+    description: t(item.descriptionKey as any),
   }));
 
   return (

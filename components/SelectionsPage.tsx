@@ -55,7 +55,7 @@ export default function SelectionsPage() {
                 loop={true}
                 className="w-full h-full"
               >
-                {imgList.map((item, ) => (
+                {imgList.map((item) => (
                   <SwiperSlide >
                     <img
                       src={ item }

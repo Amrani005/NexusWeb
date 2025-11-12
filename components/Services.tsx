@@ -97,10 +97,10 @@ const Services: React.FC = () => {
 
               <div className="flex flex-col ">
                 <h3 className="text-lg font-semibold leading-7 text-white">
-                  {t(service.titleKey)}
+                  {t(service.titleKey as any)}
                 </h3>
                 <p className="mt-2 font-bold leading-6 text-zinc-500">
-                  {t(service.descriptionKey)}
+                  {t(service.descriptionKey as any)}
                 </p>
               </div>
             </div>
