@@ -53,10 +53,10 @@ const ParticlesBackgroundOptimized = () => {
         },
         links: {
           color: "#9c27b0", 
-          distance: 150,
-          enable: false, // <-- FIX 3: THIS IS THE BIGGEST PERFORMANCE WIN
+          distance: 350,
+          enable: true, // <-- FIX 3: THIS IS THE BIGGEST PERFORMANCE WIN
           opacity: 0.4,
-          width: 1,
+          width:3,
         },
         move: {
           direction: "none" as const,
