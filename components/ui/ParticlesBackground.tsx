@@ -1,41 +1,36 @@
 'use client'
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-// You can use the slim engine to reduce the bundle size
 import { loadSlim } from "@tsparticles/slim"; 
 
 const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
 
-  // This will initialize the tsparticles engine once
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // Load the slim build
       await loadSlim(engine);
     }).then(() => {
-      // Once initialized, set init to true
       setInit(true);
     });
   }, []);
 
-  // These are the options that configure the particles
   const particleOptions = useMemo(
     () => ({
       background: {
         color: {
-          value: "#1a1a2e", // Dark background color, similar to your image
+          value: "#1a1a2e",
         },
       },
-      fpsLimit: 60, // Set a max FPS for performance
+      fpsLimit: 60, 
       interactivity: {
         events: {
           onHover: {
             enable: true,
-            mode: "grab", // On hover, lines will "grab" the cursor
+            mode: "grab", 
           },
           onClick: {
             enable: true,
-            mode: "push", // On click, push particles away
+            mode: "push",
           },
         },
         modes: {
@@ -52,23 +47,23 @@ const ParticlesBackground = () => {
       },
       particles: {
         color: {
-          value: "#ffffff", // Particle (dot) color
+          value: "#ffffff", 
         },
         links: {
-          color: "#9c27b0", // Line color (a purple shade)
+          color: "#9c27b0", 
           distance: 150,
           enable: true,
           opacity: 0.4,
           width: 1,
         },
         move: {
-          direction: "none" as const,
+          direction: "none",
           enable: true,
           outModes: {
-            default: "bounce", // Particles will bounce off the edges
-          } as const,
+            default: "bounce",
+          }, 
           random: true,
-          speed: 2, // Movement speed
+          speed: 2, 
           straight: false,
         },
         number: {
@@ -76,7 +71,7 @@ const ParticlesBackground = () => {
             enable: true,
             area: 800,
           },
-          value: 750, // Number of particles
+          value: 750, 
         },
         opacity: {
           value: 0.7,
@@ -85,16 +80,14 @@ const ParticlesBackground = () => {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 3 }, // Particles will have a random size
+          value: { min: 1, max: 3 }, 
         },
-      
       },
       detectRetina: true,
-    }),
+    } as const), 
     [],
   );
 
-  // Render the particles only after the engine is initialized
   if (init) {
     return (
       <Particles
@@ -104,7 +97,6 @@ const ParticlesBackground = () => {
     );
   }
 
-  // You can return a loading indicator or null while the engine is loading
   return null; 
 };
 
