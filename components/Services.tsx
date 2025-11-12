@@ -133,7 +133,7 @@ const Services: React.FC = () => {
                 {item.num}
               </span>
               <p className=" font-light text-zinc-300 cursor-pointer">
-                {t(item.descriptionKey)}
+                {t(item.descriptionKey as any)}
               </p>
             </div>
           ))}

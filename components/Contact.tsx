@@ -279,7 +279,7 @@ const ContactFooter: React.FC = () => {
                 {links.map((item, index)=>(
                     <a key={index} className='hover:text-purple-400 hover:scale-[1.1] cursor-pointer 
                     duration-300'>
-                      {t(item.title)}
+                      {t(item.title as any)}
                     </a>
                 ))}
               </div>
@@ -302,7 +302,7 @@ const ContactFooter: React.FC = () => {
                 {services.map((item, index)=>(
                     <a key={index} className='hover:text-purple-400 hover:scale-[1.1] cursor-pointer 
                     duration-300 transition-transform'>
-                     {t(item.title)}
+                     {t(item.title as any)}
                     </a>
                     
                 ))}

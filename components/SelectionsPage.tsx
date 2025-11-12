@@ -55,7 +55,7 @@ export default function SelectionsPage() {
                 loop={true}
                 className="w-full h-full"
               >
-                {imgList.map((item) => (
+                {imgList.map((item :string) => (
                   <SwiperSlide >
                     <img
                       src={ item }
@@ -109,7 +109,7 @@ export default function SelectionsPage() {
             <div className="rounded-lg p-6" style={{ background: '#1a1b26' }}>
               <h3 className="text-2xl font-bold mb-4">About This Project</h3>
               <p className="text-gray-300 leading-relaxed mb-6 min-h-[50px]">
-               {t(desc)}
+               {desc ? t(desc as any) : ''}
               </p>
 
               <Link

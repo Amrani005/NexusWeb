@@ -91,7 +91,7 @@ const {t} = useLanguage();
                     className="h-6 w-5 flex-none text-purple-400"
                     aria-hidden="true"
                   />
-                  {t(item.feature)}
+                  {t(item.feature as any)}
                 </li>
               ))}
             </ul>

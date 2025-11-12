@@ -321,9 +321,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   // translate function (stable across renders)
   const t = useCallback((key: TranslationKey): string => {
-    const langData = translations[language] ?? translations['en'];
+    const langData = (translations[language] || translations['en']) as Record<string, string>;
     // return key if missing from translations to avoid undefined
-    return (langData[key] as string) ?? (translations['en'][key] as string) ?? String(key);
+    return langData[key] ?? (translations['en'] as Record<string, string>)[key] ?? String(key);
   }, [language]);
 
   const value = useMemo(() => ({
