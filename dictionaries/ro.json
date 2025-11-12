@@ -1,0 +1,17 @@
+{
+  "header": {
+    "services": "Servicii",
+    "portfolio": "Portofoliu",
+    "pricing": "Prețuri",
+    "contact": "Contact",
+    "ctaButton": "Începe Proiectul"
+  },
+  "hero": {
+    "title": "Site-uri web care Îți Propulsează Afacerea în România",
+    "subtitle": "Transformăm ideile tale în site-uri web rapide, moderne și optimizate pentru a atrage mai mulți clienți. De la design la lansare, ne ocupăm de tot.",
+    "ctaButton": "Vezi Pachete & Prețuri"
+  },
+  "services": {
+    "title": "Serviciile Noastre"
+  }
+}

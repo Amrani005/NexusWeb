@@ -1,0 +1,17 @@
+{
+  "header": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "ctaButton": "Start Your Project"
+  },
+  "hero": {
+    "title": "Websites that Boost Your Business in Romania",
+    "subtitle": "We turn your ideas into fast, modern, and optimized websites to attract more customers. From design to launch, we handle everything.",
+    "ctaButton": "See Packages & Prices"
+  },
+  "services": {
+    "title": "Our Services"
+  }
+}
