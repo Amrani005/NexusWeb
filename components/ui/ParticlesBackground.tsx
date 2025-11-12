@@ -57,10 +57,10 @@ const ParticlesBackground = () => {
           width: 1,
         },
         move: {
-          direction: "none",
+          direction: "none" as const, // <--- FIRST FIX
           enable: true,
           outModes: {
-            default: "bounce",
+            default: "bounce" as const, // <--- SECOND FIX
           }, 
           random: true,
           speed: 2, 
@@ -84,7 +84,7 @@ const ParticlesBackground = () => {
         },
       },
       detectRetina: true,
-    } as const), 
+    } as const), // This outer 'as const' is also good, we'll keep it.
     [],
   );
 
