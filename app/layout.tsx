@@ -42,7 +42,7 @@ export default function RootLayout({
         <LanguageProvider>
           <Header/>
         <main>{children} </main>
-        <ContactFooter/>
+        
         </LanguageProvider>
         
       </body>

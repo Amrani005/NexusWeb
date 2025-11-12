@@ -13,6 +13,7 @@ const page = ({pageProps}:AppProps) => {
           Next.js will now load it on the client, fixing the build.
         */}
         <SelectionsPage />
+        <ContactFooter {...pageProps}/>
       </Suspense>
     </div>
   )
