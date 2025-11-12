@@ -2,8 +2,10 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; 
+// No 'as const' imports are needed, they are used on the values themselves.
 
-const ParticlesBackground = () => {
+// I've renamed the component to make it clear this is the optimized version
+const ParticlesBackgroundOptimized = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -21,12 +23,12 @@ const ParticlesBackground = () => {
           value: "#1a1a2e",
         },
       },
-      fpsLimit: 60, 
+      fpsLimit: 60, // Capping at 60fps is still a good idea
       interactivity: {
         events: {
           onHover: {
-            enable: true,
-            mode: "grab", 
+            enable: false, // <-- FIX 1: Disabled hover interactivity
+            mode: "grab",
           },
           onClick: {
             enable: true,
@@ -35,13 +37,13 @@ const ParticlesBackground = () => {
         },
         modes: {
           grab: {
-            distance: 10,
+            distance: 140, // (Original was 10, which was too small to see anyway)
             links: {
               opacity: 0.7,
             },
           },
           push: {
-            quantity: 8,
+            quantity: 4, // <-- FIX 2: Reduced from 8
           },
         },
       },
@@ -52,15 +54,15 @@ const ParticlesBackground = () => {
         links: {
           color: "#9c27b0", 
           distance: 150,
-          enable: true,
+          enable: false, // <-- FIX 3: THIS IS THE BIGGEST PERFORMANCE WIN
           opacity: 0.4,
           width: 1,
         },
         move: {
-          direction: "none" as const, // <--- FIRST FIX
+          direction: "none" as const,
           enable: true,
           outModes: {
-            default: "bounce" as const, // <--- SECOND FIX
+            default: "bounce" as const,
           }, 
           random: true,
           speed: 2, 
@@ -71,7 +73,7 @@ const ParticlesBackground = () => {
             enable: true,
             area: 800,
           },
-          value: 750, 
+          value: 80, // <-- FIX 4: Drastically reduced from 750
         },
         opacity: {
           value: 0.7,
@@ -84,7 +86,7 @@ const ParticlesBackground = () => {
         },
       },
       detectRetina: true,
-    } as const), // This outer 'as const' is also good, we'll keep it.
+    } as const),
     [],
   );
 
@@ -100,4 +102,4 @@ const ParticlesBackground = () => {
   return null; 
 };
 
-export default ParticlesBackground;
+export default ParticlesBackgroundOptimized;
