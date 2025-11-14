@@ -10,8 +10,8 @@ const ContactFooter: React.FC = () => {
   const contactData = [
     {
       title: 'Phone',
-      content: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      content: '+213795351720 ',
+      href: 'tel:+213 795351720',
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +31,8 @@ const ContactFooter: React.FC = () => {
     },
     {
       title: 'Email',
-      content: 'contact@krxweb.com',
-      href: 'mailto:contact@krxweb.com',
+      content: 'nexusweb@gmail.com',
+      href: 'nexusweb@gmail.com',
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const ContactFooter: React.FC = () => {
     },
     {
       title: 'Location',
-      content: 'San Francisco, CA',
+      content: 'Oran, Algeria',
       href: '#', // In a real site, this would be a Google Maps link
       icon: (
         <svg

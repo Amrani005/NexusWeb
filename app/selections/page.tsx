@@ -7,7 +7,7 @@ import React, { Suspense } from 'react';
 
 const page = ({pageProps}:AppProps) => {
   return (
-    <div>
+    <div className="w-[39rem] lg:w-full ">
       <Suspense fallback={<div>Loading your selection...</div>}>
         {/* This is the component from your build error.
           Next.js will now load it on the client, fixing the build.
