@@ -23,21 +23,21 @@ const ParticlesBackgroundOptimized = () => {
           value: "#1a1a2e",
         },
       },
-      fpsLimit: 60, // Capping at 60fps is still a good idea
+      fpsLimit: 30, // Capping at 60fps is still a good idea
       interactivity: {
         events: {
           onHover: {
-            enable: false, // <-- FIX 1: Disabled hover interactivity
-            mode: "grab",
+            enable: true, // <-- FIX 1: Disabled hover interactivity
+            mode: "repel",
           },
           onClick: {
             enable: true,
-            mode: "push",
+            mode: "repel",
           },
         },
         modes: {
           grab: {
-            distance: 140, // (Original was 10, which was too small to see anyway)
+            distance:1440, // (Original was 10, which was too small to see anyway)
             links: {
               opacity: 0.7,
             },
@@ -45,6 +45,11 @@ const ParticlesBackgroundOptimized = () => {
           push: {
             quantity: 4, // <-- FIX 2: Reduced from 8
           },
+          repel: {
+      distance: 150,
+      duration: 0.4
+    }
+          
         },
       },
       particles: {
@@ -53,7 +58,7 @@ const ParticlesBackgroundOptimized = () => {
         },
         links: {
           color: "#9c27b0", 
-          distance: 350,
+          distance: 750,
           enable: true, // <-- FIX 3: THIS IS THE BIGGEST PERFORMANCE WIN
           opacity: 0.4,
           width:3,
@@ -65,7 +70,7 @@ const ParticlesBackgroundOptimized = () => {
             default: "bounce" as const,
           }, 
           random: true,
-          speed: 2, 
+          speed: 1, 
           straight: false,
         },
         number: {

@@ -27,9 +27,11 @@ const Header: React.FC = () => {
 
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-gray-900/90 shadow-md
-     backdrop-blur font-sans">
-      <div className=" mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-3 left-0 right-0 z-50 shadow-xl
+     backdrop-blur bg-transparent font-sans w-[90%] translate-x-8 
+     lg:translate-x-15  rounded-3xl">
+      <div className=" mx-auto flex h-20 max-w-7xl items-center
+       justify-between px-4 sm:px-6 lg:px-8">
         
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
@@ -100,8 +102,8 @@ const Header: React.FC = () => {
       {/* Mobile Menu (Dropdown) */}
       {isMenuOpen && (
         <div 
-          className="absolute top-full left-0 w-full bg-gray-900/95 md:hidden shadow-2xl
-          shadow-purple-500 " 
+          className=" top-full left-0 w-full bg-gray-900/95 md:hidden shadow-2xl
+          shadow-purple-500  rounded-2xl " 
           id="mobile-menu"
         >
           <div className="flex flex-col space-y-4 px-2 pt-2 pb-8 sm:px-3">

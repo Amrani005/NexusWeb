@@ -60,11 +60,11 @@ const Services: React.FC = () => {
 
   return (
     <section className="bg-gray-900 py-20 isolate sm:py-32 font-bold 
-    font-sans -mb-25  ">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    font-sans -mb-25 backdrop-blur-lg ">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
 
         <div id='service' className="opacity-0 
-          text-center">
+          text-center backdrop-blur shadow-md ">
           <h2 className=" flex text-5xl font-bold tracking-tight
             text-white sm:text-6xl justify-center gap-5">
             {t('services_title')}
