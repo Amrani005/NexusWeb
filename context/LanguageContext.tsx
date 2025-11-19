@@ -75,6 +75,7 @@ export const translations = {
     pricing_button_main: "Pay Now & Get Started",
     pricing_button_alt: "Partial Payments",
     currency: "$",
+    price:'500',
 
     // Contact
     contact_title: "Let's Talk!",
@@ -166,6 +167,7 @@ export const translations = {
     pricing_button_main: "Payer Maintenant et Commencer",
     pricing_button_alt: "Paiements Partiels",
     currency: "€",
+    price:'450',
 
     // Contact
     contact_title: "Parlons-en!",
@@ -260,6 +262,7 @@ nexus_desc:"Façonner l'avenir des expériences numériques avec passion et inno
     pricing_button_main: "Plătește Acum și Începe",
     pricing_button_alt: "Plăți Parțiale",
     currency:"LEI",
+    price:'2190',
 
     // Contact
     contact_title: "Hai să Vorbim!",

@@ -77,15 +77,19 @@ const ContactFooter: React.FC = () => {
 
   const links = [
     {
+      href:'#home',
       title: 'links_title_1',
     },
     {
+      href:'#services',
       title: 'links_title_2',
     },
     {
+      href:'#pricing',
      title: 'links_title_3',
     },
     {
+      href:'#Contact',
      title: 'links_title_4',
     },
   ];
@@ -277,7 +281,7 @@ const ContactFooter: React.FC = () => {
               <div className='text-zinc-400 block w-45 text-[1rem]
               mt-4 font-light flex flex-col gap-2 '>
                 {links.map((item, index)=>(
-                    <a key={index} className='hover:text-purple-400 hover:scale-[1.1] cursor-pointer 
+                    <a key={index} href={item.href} className='hover:text-purple-400 hover:scale-[1.1] cursor-pointer 
                     duration-300'>
                       {t(item.title as any)}
                     </a>

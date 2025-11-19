@@ -4,6 +4,7 @@ import { MonitorSmartphone, Zap, Search, FolderGit2, Smile, Rocket, Globe } from
 import { useGSAP } from '@gsap/react';
 import { useLanguage } from '../context/LanguageContext';
 import { animateWithGsap } from './ui/animations';
+import gsap from 'gsap'
 
 const Services: React.FC = () => {
 
@@ -53,18 +54,18 @@ const Services: React.FC = () => {
   // ------------------------------------
 
   useGSAP(() => {
-    animateWithGsap('#service', { y: -50, opacity: 1, duration: 1.5, ease: "power2.inout", delay: 0.3 }, undefined);
-    animateWithGsap('#cards', { y: -50, opacity: 1, duration: 1.5, ease: "power2.inout", delay: 0.3 }, undefined);
-    animateWithGsap('#card', { y: -50, opacity: 1, duration: 1.5, ease: "power2.inout", delay: 0.3 }, undefined);
+    gsap.to('#service', { y: -50, opacity: 1, duration: 1.5, ease: "power2.inout", delay: 0.3 }, );
+    gsap.to('#cards', { opacity: 1, duration: 1.5, ease: "power2.inout", delay: 0.3 }, );
+    gsap.to('#card', { y: -50, opacity: 1, duration: 1.5, ease: "power2.inout", delay: 0.3 }, );
   });
 
   return (
-    <section className="bg-gray-900 py-20 isolate sm:py-32 font-bold 
+    <section id='services' className="bg-gray-900 py-20 isolate sm:py-32 font-bold 
     font-sans -mb-25 backdrop-blur-lg ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
 
         <div id='service' className="opacity-0 
-          text-center backdrop-blur shadow-md ">
+          text-center backdrop-blur  ">
           <h2 className=" flex text-5xl font-bold tracking-tight
             text-white sm:text-6xl justify-center gap-5">
             {t('services_title')}
@@ -77,8 +78,8 @@ const Services: React.FC = () => {
           </p>
         </div>
 
-        <div id='cards' className=" mt-20 grid  grid-cols-1 
-          gap-8 sm:mt-30 lg:max-w-none lg:grid-cols-3 opacity-0 ">
+        <div id='' className=" mt-20 grid  grid-cols-1 
+          gap-8 sm:mt-30 lg:max-w-none lg:grid-cols-3 ">
 
           {services.map((service) => (
             <div

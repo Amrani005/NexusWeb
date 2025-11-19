@@ -15,8 +15,8 @@ const Selection = () => {
   const {t}= useLanguage();
 
   useGSAP(()=>{
-        animateWithGsap("#sooka",{opacity:1,duration:1.7,y:-50,ease:'power2.inOut'},undefined)
-        animateWithGsap("#cards",{opacity:1,y:-50,duration:1.9,ease:'power2.inOut'}, undefined)
+        animateWithGsap("#sooka",{opacity:1,duration:1.7,ease:'power2.inOut'},undefined)
+        animateWithGsap("#cards",{opacity:1,y:50,duration:1.9,ease:'power2.inOut'}, undefined)
   
   },[])
   
@@ -57,7 +57,7 @@ const Selection = () => {
                    <PinContainer title={link} href={link}>
                      
                        <div className='relative flex items-center justify-center
-                       ovrerflow-hidden sm:w-96 w-[80vw] scale-[1] h-[20vh] '>
+                       ovrerflow-hidden sm:w-full w-[120vw] scale-[1] h-[20vh] '>
                         <div className='relative w-full h-ful  '>
                           <img src="/bg.png" alt="bg-img" />
                         </div>

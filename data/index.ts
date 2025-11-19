@@ -121,7 +121,7 @@ export const projects = [
     title: "Hotel website",
     des: "A dynamic, full-stack real estate portal featuring advanced property search, filtering, and map integration.",
     img: "/Hotel1.png",
-    imgList: ["/Hotel1.png", "/hotel2.png", "/hotel3.png", "/hotel4.png", "/hotel5.png", "/hotel6.png", "/hotel7.png", "/hotel8.png", "/hotel9.png"],
+    imgList: ["/Hotel1.png", "/hotel2.png", "/hotel3.png", "/hotel4.png", "/hotle5.png", "/hotel6.png", "/hotel7.png", "/hotel8.png", "/hotel9.png"],
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
     desc:'desc_4',

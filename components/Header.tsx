@@ -28,8 +28,8 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed top-3 left-0 right-0 z-50 shadow-xl
-     backdrop-blur bg-transparent font-sans w-[90%] translate-x-8 
-     lg:translate-x-15  rounded-3xl">
+     backdrop-blur bg-transparent  font-sans w-[90%] translate-x-8 
+     lg:translate-x-15  rounded-3xl ">
       <div className=" mx-auto flex h-20 max-w-7xl items-center
        justify-between px-4 sm:px-6 lg:px-8">
         
@@ -102,8 +102,8 @@ const Header: React.FC = () => {
       {/* Mobile Menu (Dropdown) */}
       {isMenuOpen && (
         <div 
-          className=" top-full left-0 w-full bg-gray-900/95 md:hidden shadow-2xl
-          shadow-purple-500  rounded-2xl " 
+          className=" top-full left-0 w-full bg-transparent  md:hidden shadow-xl
+          shadow-2xl  backdrop-blur rounded-b-3xl " 
           id="mobile-menu"
         >
           <div className="flex flex-col space-y-4 px-2 pt-2 pb-8 sm:px-3">

@@ -67,7 +67,7 @@ export const TextGenerateEffect = ({
               // 4. --- THIS IS THE OTHER FIX ---
               // Only apply 'opacity-0' if the animation has NOT run yet.
               className={`
-                ${idx === 2 ? 'text-purple-400' : 'dark:text-white text-white'}
+                ${idx === 2 ? 'text-purple-400 lg:text-8xl' : 'dark:text-white lg:text-8xl text-white'}
                 ${!hasAnimated ? 'opacity-0' : 'opacity-100'}
               `}
               // Only apply the blur filter if the animation has NOT run yet.

@@ -30,7 +30,7 @@ const {t} = useLanguage();
 
 
   useGSAP(()=>{
-      animateWithGsap('#pricing',{y:-50,opacity:1,duration:1.2,ease:'power2.inOut'},undefined)
+      gsap.to('#pricing',{y:-50,opacity:1,duration:1.2,ease:'power2.inOut'},)
   })
   return (
     // Section container
@@ -73,7 +73,7 @@ const {t} = useLanguage();
             {/* Price */}
             <div className="mt-6 flex items-baseline gap-x-2">
               <span className="text-5xl font-bold tracking-tight text-white">
-                {t('currency')} 500
+                {t('currency')} {t('price')}
               </span>
               <span className="text-sm font-semibold leading-6 text-gray-400">
                 /{t('pricing_tag')}
@@ -119,7 +119,7 @@ const {t} = useLanguage();
 
             {/* Secondary "Button" / Link */}
             <a
-              href="/partial-payments" // Placeholder link
+              href="#contact" // Placeholder link
               className="mt-6 block w-full text-center text-sm font-semibold leading-6 text-white transition-colors hover:text-gray-300"
             >
              {t('pricing_button_main')}
