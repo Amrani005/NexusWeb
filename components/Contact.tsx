@@ -53,7 +53,7 @@ const ContactFooter: React.FC = () => {
     },
     {
       title: 'Location',
-      content: 'Online Agency Basd in Algeria',
+      content: 'Online Agency Based in Algeria',
       href: '#', // In a real site, this would be a Google Maps link
       icon: (
         <svg
