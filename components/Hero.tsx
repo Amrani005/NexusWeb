@@ -5,6 +5,7 @@ import React from 'react';
 import { BackgroundGradientAnimation } from './ui/BackgroundGradientAnimation';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import { useLanguage } from '../context/LanguageContext'; 
+import {motion} from 'framer-motion'
 
 const Hero: React.FC = () => {
 
@@ -19,9 +20,13 @@ const Hero: React.FC = () => {
         <div className="relative  mx-auto w-full  ">       
         
              
-        <div className="mx-auto flex min-h-screen  flex-col
-         items-center  justify-center text-center ">
-            <div className='flex lg:w-400  z-50 '>
+        <motion.div 
+          initial={{y:30,opacity:0}}
+          animate={{y:0,opacity:1,transitionDelay:1}}
+          
+            className="mx-auto flex min-h-screen  flex-col
+             items-center  justify-center text-center ">
+            <div className='flex lg:w-400   '>
                <TextGenerateEffect 
                words={t('hero_title')}
             />
@@ -30,7 +35,7 @@ const Hero: React.FC = () => {
          border-purple-900/60 absolute isolate -translate-x-80 -translate-y-60
           blur-3xl '>
 
-        </div>
+         </div>
 
           {/* Subheading */}
           <p className="mt-6 text-lg  leading-8 text-gray-300 z-50 ">
@@ -48,7 +53,7 @@ const Hero: React.FC = () => {
              {t('hero_button')}
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
       </BackgroundGradientAnimation>
 

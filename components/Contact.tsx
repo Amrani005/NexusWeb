@@ -31,8 +31,8 @@ const ContactFooter: React.FC = () => {
     },
     {
       title: 'Email',
-      content: 'nexusweb@gmail.com',
-      href: 'nexusweb@gmail.com',
+      content: 'nexusweb32@gmail.com',
+      href: 'http://gmail.com',
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const ContactFooter: React.FC = () => {
     },
     {
       title: 'Location',
-      content: 'Oran, Algeria',
+      content: 'Online Agency Basd in Algeria',
       href: '#', // In a real site, this would be a Google Maps link
       icon: (
         <svg

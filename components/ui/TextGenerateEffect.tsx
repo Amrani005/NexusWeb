@@ -20,42 +20,7 @@ export const TextGenerateEffect = ({
   
   let wordsArray = words.split(" ");
   
-  useEffect(() => {
-    const runAnimation = async () => {
-      // Step 1: RESET all spans to the starting (blurry) state
-      await animate(
-        "span",
-        {
-          opacity: 1,
-          filter: filter ? "blur(10px)" : "none",
-        },
-        { duration: 0 } // Do this instantly
-      );
-
-      // Step 2: ANIMATE all spans to the final (clear) state
-      await animate(
-        "span",
-        {
-          opacity: 1,
-          filter: filter ? "blur(0px)" : "none",
-        },
-        {
-          duration: duration ? duration : 1,
-          delay: stagger(0.2),
-        }
-      );
-      
-      // Step 3: Tell the component the animation is finished
-      setHasAnimated(true);
-    };
-
-    // Run the animation sequence
-    runAnimation();
-
-  // 3. --- THIS IS THE FIX ---
-  // Use an empty dependency array (or one with stable functions).
-  // This makes the hook run ONLY ONCE on mount.
-  }, [animate, duration, filter]); // 'words' has been REMOVED.
+  
 
   const renderWords = () => {
     return (
@@ -68,12 +33,10 @@ export const TextGenerateEffect = ({
               // Only apply 'opacity-0' if the animation has NOT run yet.
               className={`
                 ${idx === 2 ? 'text-purple-400 lg:text-8xl' : 'dark:text-white lg:text-8xl text-white'}
-                ${!hasAnimated ? 'opacity-0' : 'opacity-100'}
+                
               `}
               // Only apply the blur filter if the animation has NOT run yet.
-              style={{
-                filter: !hasAnimated && filter ? "blur(10px)" : "none",
-              }}
+             
             >
               {word}{" "}
             </motion.span>
