@@ -27,9 +27,9 @@ const Header: React.FC = () => {
 
 
   return (
-    <header className="fixed top-3 left-0 right-0 z-50 shadow-xl
+    <header className="fixed top-3 left-0 right-0 z-100 shadow-xl
      backdrop-blur bg-transparent  font-sans w-[90%] translate-x-8 
-     lg:translate-x-15  rounded-3xl ">
+     lg:translate-x-15  rounded-3xl  ">
       <div className=" mx-auto flex h-20 max-w-7xl items-center
        justify-between px-4 sm:px-6 lg:px-8">
         
