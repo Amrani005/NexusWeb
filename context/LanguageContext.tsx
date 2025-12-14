@@ -13,7 +13,7 @@ export const translations = {
     nav_start_project: "Start Your Project",
 
     // Hero
-    hero_title: "Websites that Boost Your Business in Romania",
+    hero_title: "Websites that Boost Your Business in Europe",
     hero_subtitle: "We turn your ideas into fast, modern, and optimized websites to attract more customers. From design to launch, we handle everything.",
     hero_button: "See Packages & Prices",
 
@@ -114,7 +114,7 @@ export const translations = {
     nav_start_project: "Commencer Votre Projet",
 
     // Hero
-    hero_title: "Des Sites Web qui Boostent Votre Activité en Roumanie",
+    hero_title: "Des Sites Web qui Boostent Votre Activité en Europe",
     hero_subtitle: "Nous transformons vos idées en sites web rapides, modernes et optimisés pour attirer plus de clients. De la conception au lancement, nous nous occupons de tout.",
     hero_button: "Voir les Forfaits et Prix",
 
@@ -210,7 +210,7 @@ nexus_desc:"Façonner l'avenir des expériences numériques avec passion et inno
     nav_start_project: "Începe Proiectul",
 
     // Hero
-    hero_title: "Site-uri Web care Îți Propulsează Afacerea în România",
+    hero_title: "Site-uri Web care Îți Propulsează Afacerea în Europa",
     hero_subtitle: "Transformăm ideile tale în site-uri web rapide, moderne și optimizate pentru a atrage mai mulți clienți. De la design la lansare, ne ocupăm de tot.",
     hero_button: "Vezi Pachete și Prețuri",
 
