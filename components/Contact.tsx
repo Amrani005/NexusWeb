@@ -31,7 +31,7 @@ const ContactFooter: React.FC = () => {
     },
     {
       title: 'Email',
-      content: 'nexusweb32@gmail.com',
+      content: 'nexusweb99@gmail.com',
       href: 'http://gmail.com',
       icon: (
         <svg
